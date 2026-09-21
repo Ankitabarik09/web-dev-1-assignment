@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ankita Barik | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            color: #2563eb;
+            font-size: 25px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 22px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #334155;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            padding: 65px 20px;
+            scroll-margin-top: 80px;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .hero h2 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #64748b;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #0f172a;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .about-card,
+        .project-card,
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+        }
+
+        .about-card p {
+            margin-bottom: 15px;
+            color: #475569;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill {
+            background: white;
+            border: 1px solid #bfdbfe;
+            color: #1d4ed8;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .project-card {
+            margin-bottom: 20px;
+            border-left: 5px solid #2563eb;
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        .project-card p {
+            color: #64748b;
+        }
+
+        .contact-card {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact-info {
+            margin-bottom: 25px;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+        }
+
+        .contact-info a {
+            color: #2563eb;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input,
+        textarea {
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: inherit;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: 2px solid #93c5fd;
+            border-color: #2563eb;
+        }
+
+        button {
+            padding: 12px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            background: #0f172a;
+            color: white;
+            padding: 25px;
+        }
+
+        @media (max-width: 650px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 45px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Ankita Barik</h1>
+
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+
+            <h2>Hello, I'm <span>Ankita Barik</span></h2>
+
+            <p>
+                B.Tech 1st Year Student | Aspiring Web Developer
+            </p>
+
+            <p>
+                Welcome to my personal portfolio website.
+            </p>
+
+            <a href="#about" class="btn">Explore My Portfolio</a>
+
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about-card">
+
+                <p>
+                    Hello! My name is Ankita Barik.
+                    I am currently pursuing B.Tech 1st Year
+                    at KR Mangalam.
+                </p>
+
+                <p>
+                    I am interested in web development
+                    and learning new programming technologies.
+                </p>
+
+                <p>
+                    My career goal is to become a skilled
+                    Web Developer and create useful,
+                    attractive, and user-friendly websites.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+
+            <h2 class="section-title">My Skills</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">C</div>
+                <div class="skill">Python</div>
+                <div class="skill">Git & GitHub</div>
+
+            </div>
+
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+
+            <h2 class="section-title">My Projects</h2>
+
+            <div class="project-card">
+
+                <h3>Beginner Project</h3>
+
+                <p>
+                    A beginner-level web development project
+                    created to practice HTML, CSS, and
+                    JavaScript skills.
+                </p>
+
+                <p>
+                    More projects will be added as I continue
+                    learning and improving my development skills.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+
+            <h2 class="section-title">Contact Me</h2>
+
+            <div class="contact-card">
+
+                <div class="contact-info">
+
+                    <p>
+                        <strong>Name:</strong> Ankita Barik
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:barikankita681@gmail.com">
+                            barikankita681@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong>
+                        <a href="tel:9319778037">
+                            9319778037
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>College:</strong> KR Mangalam
+                    </p>
+
+                </div>
+
+                <form action="#" method="post">
+
+                    <label for="name">Full Name:</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                    <label for="email">Email Address:</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <label for="subject">Subject:</label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Enter subject"
+                        required
+                    >
+
+                    <label for="message">Message:</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Write your message"
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 Ankita Barik.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
